@@ -1,2 +1,5 @@
-<h1>Perfil de <%= @user.first_name %> <%= @user.last_name %></h1>
-<p>Email: <%= @user.email %></p>
+# <h1>Perfil de <%= @user.first_name %> <%= @user.last_name %></h1>
+# <p>Email: <%= @user.email %></p>
+
+<% person = UsersHelper::Person.new(@user.first_name, @user.last_name, @user.email) %>
+<p><%= person.present %></p>
